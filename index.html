@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Security News Dashboard</title>
+  <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+
+  <div class="container">
+    <div class="header">
+      <h1>Security News Dashboard</h1>
+      <p class="subtitle">Live cybersecurity news analyzed by AI</p>
+      <button id="refreshBtn">Fetch Latest News</button>
+    </div>
+
+    <div id="loading" style="display:none;">
+      <p class="loading">Fetching and analyzing latest threats...</p>
+    </div>
+
+    <div id="stats" style="display:none;">
+      <div class="stat-box" id="totalArticles">
+        <span class="stat-value">0</span>
+        <span class="stat-label">Articles</span>
+      </div>
+      <div class="stat-box" id="criticalCount">
+        <span class="stat-value">0</span>
+        <span class="stat-label">Critical</span>
+      </div>
+      <div class="stat-box" id="highCount">
+        <span class="stat-value">0</span>
+        <span class="stat-label">High</span>
+      </div>
+      <div class="stat-box" id="breachCount">
+        <span class="stat-value">0</span>
+        <span class="stat-label">Data Breaches</span>
+      </div>
+    </div>
+
+    <div id="dashboard" class="dashboard"></div>
+  </div>
+
+  <script src="static/app.js"></script>
+</body>
+</html>

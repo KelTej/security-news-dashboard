@@ -1,0 +1,212 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #0f1117;
+  color: #e0e0e0;
+  font-family: 'Courier New', monospace;
+  min-height: 100vh;
+  padding: 40px 20px;
+}
+
+.container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+h1 {
+  font-size: 28px;
+  color: #00ff99;
+  letter-spacing: 1px;
+}
+
+.subtitle {
+  color: #888;
+  font-size: 13px;
+  margin-top: 4px;
+}
+
+button {
+  background-color: #00ff99;
+  border: none;
+  border-radius: 8px;
+  color: #0f1117;
+  cursor: pointer;
+  font-family: 'Courier New', monospace;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 12px 24px;
+  transition: background-color 0.2s;
+  white-space: nowrap;
+}
+
+button:hover {
+  background-color: #00cc7a;
+}
+
+button:disabled {
+  background-color: #444;
+  cursor: not-allowed;
+}
+
+#stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.stat-box {
+  background-color: #1a1d27;
+  border: 1px solid #2a2d3a;
+  border-radius: 8px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.stat-value {
+  font-size: 36px;
+  font-weight: bold;
+  color: #00ff99;
+}
+
+.stat-label {
+  font-size: 11px;
+  color: #888;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.dashboard {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 20px;
+}
+
+.article-card {
+  background-color: #1a1d27;
+  border: 1px solid #2a2d3a;
+  border-radius: 8px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: border-color 0.2s;
+}
+
+.article-card:hover {
+  border-color: #00ff99;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+
+.category-badge {
+  font-size: 10px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+
+.category-malware { background-color: #2b0d0d; color: #ff4444; border: 1px solid #ff4444; }
+.category-data-breach { background-color: #2b1a00; color: #ff8800; border: 1px solid #ff8800; }
+.category-vulnerability { background-color: #1a1a00; color: #ffff00; border: 1px solid #ffff00; }
+.category-ransomware { background-color: #2b0d0d; color: #ff4444; border: 1px solid #ff4444; }
+.category-phishing { background-color: #1a002b; color: #cc44ff; border: 1px solid #cc44ff; }
+.category-nation-state { background-color: #00002b; color: #4488ff; border: 1px solid #4488ff; }
+.category-other { background-color: #1a1d27; color: #888; border: 1px solid #444; }
+
+.severity-badge {
+  font-size: 10px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+
+.severity-critical { background-color: #2b0d0d; color: #ff4444; border: 1px solid #ff4444; }
+.severity-high { background-color: #2b1a00; color: #ff8800; border: 1px solid #ff8800; }
+.severity-medium { background-color: #1a1a00; color: #ffff00; border: 1px solid #ffff00; }
+.severity-low { background-color: #0d2b1f; color: #00ff99; border: 1px solid #00ff99; }
+
+.article-title {
+  font-size: 14px;
+  font-weight: bold;
+  color: #e0e0e0;
+  line-height: 1.5;
+}
+
+.article-summary {
+  font-size: 13px;
+  color: #aaa;
+  line-height: 1.6;
+}
+
+.article-takeaway {
+  font-size: 12px;
+  color: #00ff99;
+  line-height: 1.6;
+  border-left: 2px solid #00ff99;
+  padding-left: 10px;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+}
+
+.article-source {
+  font-size: 11px;
+  color: #555;
+}
+
+.read-more {
+  font-size: 11px;
+  color: #00ff99;
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+
+.read-more:hover {
+  text-decoration: underline;
+}
+
+.loading {
+  color: #00ff99;
+  font-size: 14px;
+  text-align: center;
+  padding: 40px;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
